@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mayra Moraes — Saúde Mental com Seriedade</title>
-  <meta name="description" content="Assistente Social especializada em NR-1, vícios in jogos/apostas online e saúde mental empresarial.">
+  <title>Mayra Moraes — Saúde Mental com Seriedade [OPÇÃO 5: ACOLHEDOR]</title>
+  <meta name="description" content="Assistente Social especializada em NR-1, vícios em jogos/apostas online e saúde mental empresarial.">
   <meta property="og:title" content="Mayra Moraes — Saúde Mental com Seriedade" />
   <meta property="og:description" content="Atendimento individual, consultoria NR-1 e mentoria para famílias." />
   <meta property="og:type" content="website" />
@@ -17,29 +17,22 @@
       --neutral-300:#E5E5E5; --neutral-400:#D4D4D4; --neutral-500:#A3A3A3; --neutral-600:#737373;
       --neutral-700:#525252; --neutral-800:#262626; --neutral-900:#0F0F0F;
       --accent: #FF6B00;
-      --hotmart: #ff5a00;
       --radius: 12px;
     }
     * { box-sizing: border-box; }
     html, body { height: 100%; }
-    body { margin: 0; font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; color: var(--neutral-800); background: var(--neutral-0); }
+    body { margin: 0; font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; color: var(--neutral-800); background: #FAFAF5; }
     .container { width: min(1200px, 92vw); margin: 0 auto; padding: 0 24px; }
-    .section { padding: 80px 0; }
+    .section { padding: 80px 0; border-bottom: 2px solid rgba(255,107,0,0.08); position: relative; }
+    .section::after { content: ''; position: absolute; bottom: -2px; left: 50%; transform: translateX(-50%); width: 60px; height: 2px; background: linear-gradient(90deg, transparent, var(--accent), transparent); }
+    .section { background: linear-gradient(135deg, rgba(255,239,220,0.3) 0%, rgba(255,250,240,0.3) 100%); }
     .section-num { font-size: 12px; font-weight: 800; color: var(--accent); letter-spacing: 2px; margin-bottom: 6px; }
     .headline { font-size: 40px; line-height: 1.2; font-weight: 800; color: var(--neutral-900); margin: 0 0 12px; }
     .subheadline { font-size: 18px; line-height: 1.5; font-weight: 600; color: #222; opacity: 0.85; margin: 0 0 24px; }
     .body-text { font-size: 16px; line-height: 1.7; color: var(--neutral-700); margin-bottom: 16px; }
-    
-    /* Botões */
     .cta { display:inline-block; padding: 14px 28px; background: var(--accent); color: #fff; border: 0; border-radius: 999px; font-weight: 600; text-decoration: none; box-shadow: 0 10px 24px rgba(255,107,0,0.25); }
     .cta:hover { background:#E35F00; }
     .cta:active { background:#CC5400; }
-    
-    .btn-hotmart { display:inline-block; padding: 14px 28px; background: var(--hotmart); color: #fff; border: 0; border-radius: 999px; font-weight: 600; text-decoration: none; box-shadow: 0 10px 24px rgba(255,90,0,0.25); }
-    .btn-hotmart:hover { background:#e04f00; }
-    
-    .btn-group { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin: 24px 0; }
-
     .center { text-align:center; }
     .muted { color: var(--neutral-600); }
     .grid { display:grid; gap:16px; grid-template-columns: 1fr; }
@@ -49,15 +42,9 @@
     .bullet { padding:10px 14px; border:1px solid var(--neutral-200); border-radius: var(--radius); color: var(--neutral-700); font-size: 15px; }
     ul, ol { margin: 16px 0; padding-left: 24px; }
     li { margin-bottom: 8px; line-height: 1.6; color: var(--neutral-700); }
-    footer { background: var(--neutral-50); }
-    
-    @media (max-width: 480px) { 
-      .container { width: 94vw; padding: 0 16px; } 
-      .headline { font-size: 30px; } 
-      .subheadline { font-size: 16px; } 
-      .btn-group { flex-direction: column; gap: 12px; }
-      .cta, .btn-hotmart { width: 100%; text-align: center; }
-    }
+    footer { background: #F5F0E8; border-bottom: none; }
+    footer::after { display: none; }
+    @media (max-width: 480px) { .container { width: 94vw; padding: 0 16px; } .headline { font-size: 30px; } .subheadline { font-size: 16px; } }
     @keyframes fadeInUp { from { opacity:0; transform: translateY(8px); } to { opacity:1; transform: translateY(0); } }
     .fade { animation: fadeInUp .5s ease-out both; }
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
@@ -67,16 +54,16 @@
   <!-- SEÇÃO 1: APRESENTAÇÃO (HERO) -->
   <section class="section" aria-labelledby="hero-title">
     <div class="container center">
-      <img src="logo.jpg" alt="Mayra Moraes" style="width:96px;height:96px;border-radius:50%;margin-bottom:18px;" class="fade">
-      <p class="section-num fade" style="animation-delay:.1s">MAYRA MORAES</p>
-      <h1 id="hero-title" class="headline fade" style="animation-delay:.15s">Assistente Social | Psicanalista em Formação</h1>
-      <p class="subheadline fade" style="animation-delay:.2s">Especialista na Implantação da NR-1 nas Empresas</p>
-      <p class="body-text fade" style="animation-delay:.25s; max-width:700px;margin-left:auto;margin-right:auto;">Cuidar da saúde mental não é um custo.<br>É uma decisão estratégica, humana e legal.</p>
+      <img src="logo.jpg" alt="Mayra Moraes" style="width:140px;height:140px;border-radius:50%;margin-bottom:24px;" class="fade">
+      <h1 id="hero-title" class="headline fade" style="animation-delay:.1s">Especialista na Implantação da NR-1 nas Empresas</h1>
+      <p class="subheadline fade" style="animation-delay:.15s">Assistente Social | Psicanalista em Formação</p>
+      <p class="body-text fade" style="animation-delay:.2s; max-width:700px;margin-left:auto;margin-right:auto;">Cuidar da saúde mental não é um custo.<br>É uma decisão estratégica, humana e legal.</p>
       <hr style="border:none;border-top:1px solid var(--neutral-300);margin:40px 0;opacity:0.5;">
-      <p class="headline" style="font-size:28px;margin:24px 0 8px;max-width:700px;margin-left:auto;margin-right:auto;" class="fade" style="animation-delay:.3s">Saúde mental que transforma pessoas, famílias e empresas.</p>
-      <p class="body-text fade" style="animation-delay:.35s;max-width:700px;margin-left:auto;margin-right:auto;">Ajudo pessoas afetadas por vícios comportamentais, especialmente jogos e apostas online, e empresas que precisam se adequar à NR-1, promovendo ambientes de trabalho mais saudáveis, produtivos e seguros.</p>
+      <p class="headline" style="font-size:28px;margin:24px 0 8px;max-width:700px;margin-left:auto;margin-right:auto;" class="fade" style="animation-delay:.25s">Saúde mental que transforma pessoas, famílias e empresas.</p>
+      <p class="body-text fade" style="animation-delay:.3s;max-width:700px;margin-left:auto;margin-right:auto;">Ajudo pessoas afetadas por vícios comportamentais, especialmente jogos e apostas online, e empresas que precisam se adequar à NR-1, promovendo ambientes de trabalho mais saudáveis, produtivos e seguros.</p>
       
       <div style="margin:32px 0;text-align:left;max-width:600px;margin-left:auto;margin-right:auto;" class="fade" style="animation-delay:.4s">
+          <div style="margin:32px 0;text-align:left;max-width:600px;margin-left:auto;margin-right:auto;" class="fade" style="animation-delay:.35s">
         <p style="font-weight:600;margin-bottom:12px;color:var(--neutral-900);">Minha atuação une:</p>
         <ul style="margin:0;padding-left:24px;">
           <li>Escuta clínica</li>
@@ -92,19 +79,14 @@
         <div class="bullet">📍 Projetos personalizados</div>
       </div>
       
-      <!-- Grupo de Botões Alinhados no Topo -->
-      <div class="btn-group fade" style="animation-delay:.5s">
-        <a href="https://wa.me/5514997439364?text=Olá Mayra, tenho interesse em saber mais" class="cta">Quero saber como posso ser ajudado(a)</a>
-        <a href="https://www.hotmart.com/pt-br/marketplace/produtos/projeto-game-over-como-superar-o-vicio-em-jogos-e-apostas-online/P98421643X" target="_blank" class="btn-hotmart">Comprar Ebook Hotmart</a>
-      </div>
+      <a href="https://wa.me/5514997439364?text=Olá Mayra, tenho interesse em saber mais" class="cta fade" style="animation-delay:.45s">Quero saber como posso ser ajudado(a)</a>
     </div>
   </section>
 
   <!-- SEÇÃO 2: QUEM SOU EU -->
   <section class="section" aria-labelledby="quem-sou-title">
     <div class="container center">
-      <p class="section-num fade" style="animation-delay:.1s">SEÇÃO 2</p>
-      <h2 id="quem-sou-title" class="headline fade" style="animation-delay:.15s">Minha história não é apenas profissional.<br>É pessoal.</h2>
+      <h2 id="quem-sou-title" class="headline fade" style="animation-delay:.1s">Minha história não é apenas profissional.<br>É pessoal.</h2>
       <div style="max-width:900px;margin:32px auto 0;" class="fade" style="animation-delay:.2s">
         <p class="body-text">Sou Assistente Social, psicanalista em formação e especialista na implantação da NR-1 – Saúde Mental nas Empresas.</p>
         <p class="body-text">Minha atuação nasceu da dor, da vivência real e da observação profunda de como o sofrimento psíquico silencioso destrói vidas, famílias e carreiras — especialmente quando envolve vícios em jogos e apostas online.</p>
@@ -120,8 +102,7 @@
   <!-- SEÇÃO 3: PARA QUEM É MEU TRABALHO -->
   <section class="section" aria-labelledby="publico-title">
     <div class="container">
-      <p class="section-num fade" style="animation-delay:.1s">SEÇÃO 3</p>
-      <h2 id="publico-title" class="headline fade" style="animation-delay:.15s">Para quem é meu trabalho</h2>
+      <h2 id="publico-title" class="headline fade" style="animation-delay:.1s">Para quem é meu trabalho</h2>
       <p class="subheadline fade" style="animation-delay:.2s">Atendo três frentes principais:</p>
       
       <div class="grid fade" style="animation-delay:.25s">
@@ -157,8 +138,7 @@
   <!-- SEÇÃO 4: SERVIÇOS -->
   <section class="section" aria-labelledby="servicos-title">
     <div class="container">
-      <p class="section-num fade" style="animation-delay:.1s">SEÇÃO 4</p>
-      <h2 id="servicos-title" class="headline fade" style="animation-delay:.15s">Serviços</h2>
+      <h2 id="servicos-title" class="headline fade" style="animation-delay:.1s">Serviços</h2>
       
       <div style="max-width:900px;margin:32px auto;" class="fade" style="animation-delay:.2s">
         <article class="card" style="margin-bottom:24px;">
@@ -210,8 +190,7 @@
   <!-- SEÇÃO 5: RESULTADOS E IMPACTOS -->
   <section class="section" aria-labelledby="resultados-title">
     <div class="container center">
-      <p class="section-num fade" style="animation-delay:.1s">SEÇÃO 5</p>
-      <h2 id="resultados-title" class="headline fade" style="animation-delay:.15s">Resultados e Impactos</h2>
+      <h2 id="resultados-title" class="headline fade" style="animation-delay:.1s">Resultados e Impactos</h2>
       <p class="subheadline fade" style="animation-delay:.2s">O que meu trabalho promove:</p>
       
       <div style="max-width:700px;margin:32px auto;" class="fade" style="animation-delay:.25s">
@@ -231,8 +210,7 @@
   <!-- SEÇÃO 6: AUTORIDADE E CONHECIMENTO -->
   <section class="section" aria-labelledby="ebooks-title">
     <div class="container">
-      <p class="section-num fade" style="animation-delay:.1s">SEÇÃO 6</p>
-      <h2 id="ebooks-title" class="headline fade" style="animation-delay:.15s">Autoridade e Conhecimento</h2>
+      <h2 id="ebooks-title" class="headline fade" style="animation-delay:.1s">Autoridade e Conhecimento</h2>
       <p class="subheadline fade" style="animation-delay:.2s">Sou autora de dois e-books:</p>
       
       <div class="grid fade" style="animation-delay:.25s">
@@ -256,11 +234,8 @@
           <li>Estudos clínicos</li>
           <li>Linguagem acessível e humana</li>
         </ul>
-        
-        <!-- Grupo de Botões Alinhados nos E-books -->
-        <div class="btn-group fade" style="animation-delay:.35s">
-          <a href="https://www.hotmart.com/pt-br/marketplace/produtos/projeto-game-over-como-superar-o-vicio-em-jogos-e-apostas-online/P98421643X" target="_blank" class="btn-hotmart">Conhecer os e-books</a>
-          <a href="https://wa.me/5514997439364?text=Olá Mayra, gostaria de tirar dúvidas sobre os e-books" target="_blank" class="cta" style="background:#25d366;box-shadow:0 10px 24px rgba(37,211,102,0.25);">Falar no WhatsApp</a>
+        <div style="text-align:center;margin-top:24px;">
+          <a href="https://wa.me/5514997439364?text=Quero conhecer os e-books" class="cta fade" style="animation-delay:.35s">Conheça os e-books</a>
         </div>
       </div>
     </div>
@@ -269,8 +244,7 @@
   <!-- SEÇÃO 7: POSICIONAMENTO -->
   <section class="section center" aria-labelledby="posicionamento-title">
     <div class="container center">
-      <p class="section-num fade" style="animation-delay:.1s">SEÇÃO 7</p>
-      <h2 id="posicionamento-title" class="headline fade" style="animation-delay:.15s;max-width:700px;margin-left:auto;margin-right:auto;font-size:32px;">
+      <h2 id="posicionamento-title" class="headline fade" style="animation-delay:.1s;max-width:700px;margin-left:auto;margin-right:auto;font-size:32px;">
         "Saúde mental não é fraqueza.<br>É responsabilidade individual, social e empresarial."
       </h2>
     </div>
@@ -279,8 +253,7 @@
   <!-- SEÇÃO 8: CTA FINAL -->
   <section class="section center" aria-labelledby="cta-final-title">
     <div class="container">
-      <p class="section-num fade" style="animation-delay:.1s">SEÇÃO 8</p>
-      <h2 id="cta-final-title" class="headline fade" style="animation-delay:.15s">Você não precisa enfrentar isso sozinho(a).</h2>
+      <h2 id="cta-final-title" class="headline fade" style="animation-delay:.1s">Você não precisa enfrentar isso sozinho(a).</h2>
       <p class="body-text fade" style="animation-delay:.2s;max-width:700px;margin-left:auto;margin-right:auto;">Seja para cuidar da sua saúde mental, ajudar alguém que você ama, ou adequar sua empresa à NR-1, existe um caminho possível, ético e humano.</p>
       
       <div style="margin:32px 0;" class="fade" style="animation-delay:.25s">
