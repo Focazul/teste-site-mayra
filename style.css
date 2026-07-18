@@ -1,61 +1,45 @@
 :root {
   --bg-color: #ECE5DC;
   --bg-secondary: #D8CFC3;
-  --text-primary: #31475D; /* Azul marinho profundo */
-  --text-secondary: #4D6783;
-  --accent: #31475D;       /* O azul agora também atua como cor de destaque */
+  --text-primary: #31475D;    /* Azul marinho profundo (Botões e Títulos) */
+  --text-secondary: #5A6E82;  /* Azul levemente mais claro (Corpo do texto) */
+  --text-accent: #8C7B6C;     /* O tom de "taupe" para subtítulos e detalhes */
   --border: rgba(49, 71, 93, 0.25);
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+/* Aplicando as cores de forma diferenciada */
 
+/* Títulos continuam com o Azul Marinho para autoridade */
+h1, h2, h3 { 
+  font-family: 'Cormorant Garamond', serif; 
+  color: var(--text-primary); 
+}
+
+/* O corpo do texto usa o azul secundário, diferenciando-se visualmente do botão */
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: var(--bg-color);
-  color: var(--text-secondary);
+  color: var(--text-secondary); /* Diferenciado do Azul Marinho dos botões */
   line-height: 1.8;
-  -webkit-font-smoothing: antialiased;
 }
 
-/* Espaçamento Profissional */
-.section { padding: 120px 0; } 
-.container { width: min(1100px, 92vw); margin: auto; padding: 0 20px; }
-
-/* HERO */
-.hero { text-align: center; padding: 140px 0 100px; }
-
-.logo-img {
-  max-width: 200px;
-  filter: grayscale(1) opacity(0.8);
-}
-
-.top-badge {
-  display: inline-block;
-  border: 2px solid var(--text-primary);
-  padding: 8px 24px;
-  font-size: 11px;
-  letter-spacing: 3px;
-  font-weight: 700;
+/* Subtítulos usam a cor de acento para criar um contraste elegante */
+.section-subtitle {
+  display: block;
+  text-align: center;
+  color: var(--text-accent); /* Cor diferente do botão e dos títulos */
   text-transform: uppercase;
-  margin-bottom: 40px;
-  color: var(--text-primary);
+  letter-spacing: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
-.hero-headline {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.8rem, 7vw, 5rem);
-  color: var(--text-primary);
-  font-weight: 500;
-  margin-bottom: 30px;
-  letter-spacing: -1px;
-}
-
-/* Botão em Azul Marinho Sólido */
+/* Botões mantêm o Azul Marinho para destacar a ação */
 .btn {
   padding: 18px 45px;
   border: 2px solid var(--text-primary);
-  background: var(--text-primary); /* Azul Sólido */
+  background: var(--text-primary); 
   color: #ffffff;
   font-size: 13px;
   font-weight: 700;
@@ -69,39 +53,4 @@ body {
   background: transparent;
   color: var(--text-primary);
   cursor: pointer;
-}
-
-/* Tipografia e Títulos */
-h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--text-primary); }
-
-.section-subtitle {
-  display: block;
-  text-align: center;
-  color: var(--text-primary); /* Subtítulo também em azul para firmeza */
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  font-size: 12px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-/* Cards com presença */
-.card {
-  background: rgba(255, 255, 255, 0.4);
-  border: 2px solid var(--border);
-  padding: 50px;
-  transition: all 0.5s ease;
-}
-
-.card:hover {
-  background: var(--bg-secondary);
-  border-color: var(--text-primary); /* Destaque no hover */
-  transform: translateY(-5px);
-}
-
-/* RESPONSIVO */
-@media(max-width:768px) {
-  .section { padding: 80px 0; }
-  .hero-headline { font-size: 2.5rem; }
-  .btn { width: 100%; }
 }
