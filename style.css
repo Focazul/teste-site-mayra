@@ -2,10 +2,9 @@
   --bg-color: #ECE5DC;
   --bg-secondary: #D8CFC3;
   
-  /* Paleta de Cores Refinada */
   --text-primary: #1E2D3B;    /* Azul Marinho Profundo */
   --text-secondary: #4A5B6D;  /* Azul Suave */
-  --accent-taupe: #8C7B6C;    /* Tom Terroso (Subtítulos) */
+  --accent-taupe: #8C7B6C;    /* Tom Terroso */
   
   --border: rgba(30, 45, 59, 0.25);
 }
@@ -15,7 +14,6 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Montserrat', sans-serif;
-  /* Gradiente radial sutil elimina a monotonia e dá volume ao fundo */
   background: radial-gradient(circle at 100% 0%, #f2ede6, #ECE5DC);
   background-attachment: fixed;
   color: var(--text-secondary);
@@ -27,8 +25,8 @@ body {
 .section { padding: 120px 0; } 
 .container { width: min(1100px, 92vw); margin: auto; padding: 0 20px; }
 
-/* HERO */
-.hero { text-align: center; padding: 140px 0 100px; }
+/* HERO - Ajustado para maior impacto */
+.hero { text-align: center; padding: 120px 0 80px; }
 
 .logo-img {
   max-width: 200px;
@@ -43,44 +41,54 @@ body {
   letter-spacing: 3px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 40px;
+  margin: 30px 0;
   color: var(--text-primary);
 }
 
 .hero-headline {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.8rem, 7vw, 5rem);
+  font-size: clamp(3.5rem, 9vw, 6rem); /* Título maior e mais imponente */
   color: var(--text-primary);
-  font-weight: 500;
+  font-weight: 700; /* Peso extra para autoridade */
   margin-bottom: 30px;
-  letter-spacing: -1px;
+  line-height: 0.9;
+  letter-spacing: -2px;
 }
 
-/* Botões */
+/* Linha decorativa de âncora */
+.hero::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 50px;
+  background: var(--accent-taupe);
+  margin: 40px auto 0;
+}
+
+/* Hierarquia de Botões */
+.btn-group { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 40px; }
+
 .btn {
   padding: 18px 45px;
-  border: 2px solid var(--text-primary);
-  background: var(--text-primary); 
-  color: #ffffff;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 2px;
   text-decoration: none;
   display: inline-block;
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 2px solid var(--text-primary);
 }
 
-.btn:hover {
-  background: transparent;
-  color: var(--text-primary);
-  cursor: pointer;
-}
+/* Botão Principal (Sólido) */
+.btn-primary { background: var(--text-primary); color: #ffffff; }
+.btn-primary:hover { background: transparent; color: var(--text-primary); }
+
+/* Botão Secundário (Contorno) */
+.btn-secondary { background: transparent; color: var(--text-primary); }
+.btn-secondary:hover { background: var(--text-primary); color: #ffffff; }
 
 /* Tipografia e Títulos */
-h1, h2, h3 { 
-  font-family: 'Cormorant Garamond', serif; 
-  color: var(--text-primary); 
-}
+h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--text-primary); }
 
 .section-subtitle {
   display: block;
@@ -95,9 +103,8 @@ h1, h2, h3 {
 
 /* Cards com Profundidade */
 .card {
-  background: rgba(255, 255, 255, 0.6); /* Mais opaco para dar corpo */
+  background: rgba(255, 255, 255, 0.6);
   border: 2px solid var(--border);
-  /* Linha de ancoragem superior para dar peso visual */
   border-top: 6px solid var(--text-primary); 
   padding: 50px;
   transition: all 0.5s ease;
@@ -108,12 +115,12 @@ h1, h2, h3 {
   background: #ffffff;
   border-color: var(--text-primary);
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(30, 45, 59, 0.1);
+  box-shadow: 0 20px 40px rgba(30, 58, 138, 0.1);
 }
 
 /* RESPONSIVO */
 @media(max-width:768px) {
   .section { padding: 80px 0; }
-  .hero-headline { font-size: 2.5rem; }
+  .hero-headline { font-size: 3rem; }
   .btn { width: 100%; }
 }
