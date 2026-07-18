@@ -1,398 +1,236 @@
-<!doctype html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mayra Moraes — Saúde Mental com Seriedade</title>
-  <meta name="description" content="Assistente Social especializada em NR-1, vícios em jogos/apostas online e saúde mental empresarial.">
-  <meta property="og:title" content="Mayra Moraes — Saúde Mental com Seriedade" />
-  <meta property="og:description" content="Atendimento individual, consultoria NR-1 e mentoria para famílias." />
-  <meta property="og:type" content="website" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mayra Moraes | Saúde Mental e Consultoria NR-1</title>
+
+  <meta name="description" content="Atendimento especializado para dependência em jogos e apostas online, orientação familiar e consultoria empresarial para adequação à NR-1.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --neutral-0: #FFFFFF; 
-      --neutral-50: #F1ECE1; /* Fundo Creme Quente e Acolhedor */
-      --neutral-100: #E6DFD3; 
-      --neutral-200: #DBD2C2;
-      --neutral-700: #6B6B6B; /* Texto Secundário Suave */
-      --neutral-800: #1C1C1C; 
-      --neutral-900: #000000; /* Texto Principal em Preto Puro */
-      --accent: #5D81AC; /* Azul Profissional e de Confiança */
-      --accent-dark: #446288;
-      --radius-lg: 20px; 
-      --radius-md: 12px;
-      --shadow: 0 4px 20px rgba(0, 0, 0, 0.02), 0 8px 30px rgba(93, 129, 172, 0.04);
-      --shadow-hover: 0 20px 40px rgba(93, 129, 172, 0.08);
-    }
-    
-    * { box-sizing: border-box; }
-    html, body { height: 100%; scroll-behavior: smooth; }
-    body { 
-      margin: 0; 
-      font-family: 'DM Sans', system-ui, -apple-system, sans-serif; 
-      color: var(--neutral-900); 
-      background: var(--neutral-50); 
-      -webkit-font-smoothing: antialiased; 
-    }
-    
-    .container { width: min(1200px, 92vw); margin: 0 auto; padding: 0 24px; }
-    .section { padding: 5rem 0; position: relative; overflow: hidden; }
-    
-    /* Fundos Alternados */
-    .bg-white { background: var(--neutral-0); }
-    .bg-creme-alt { background: linear-gradient(180deg, var(--neutral-50) 0%, var(--neutral-100) 100%); }
-    
-    /* Tipografia Estilo Versão 7 */
-    .headline { font-size: 2rem; line-height: 1.3; font-weight: 800; color: var(--neutral-900); margin: 0 0 24px; text-transform: uppercase; letter-spacing: 0.06em; }
-    .hero-headline { font-size: 3.5rem; line-height: 1.15; font-weight: 800; color: var(--neutral-900); margin: 0 0 24px; text-transform: uppercase; letter-spacing: 0.08em; }
-    .subheadline { font-size: 1.1rem; line-height: 1.5; font-weight: 700; color: var(--accent); margin: 0 0 20px; text-transform: uppercase; letter-spacing: 0.1em; }
-    .body-text { font-size: 1rem; line-height: 1.8; color: var(--neutral-700); margin-bottom: 24px; font-weight: 400; }
-    
-    /* Botões Corporativos */
-    .cta { 
-      display: inline-flex; 
-      align-items: center; 
-      justify-content: center; 
-      padding: 18px 40px; 
-      background: var(--accent); 
-      color: #ffffff; 
-      border: 0; 
-      border-radius: 999px; 
-      font-weight: 700; 
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      text-decoration: none; 
-      box-shadow: 0 8px 24px rgba(93, 129, 172, 0.2); 
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
-    }
-    .cta:hover { 
-      background: var(--accent-dark); 
-      transform: translateY(-4px); 
-      box-shadow: 0 16px 32px rgba(93, 129, 172, 0.3); 
-    }
-    
-    .cta-secondary {
-      background: transparent;
-      color: var(--accent);
-      border: 2px solid var(--accent);
-      box-shadow: none;
-    }
-    .cta-secondary:hover {
-      background: rgba(93, 129, 172, 0.05);
-      color: var(--accent-dark);
-      border-color: var(--accent-dark);
-      transform: translateY(-4px);
-      box-shadow: none;
-    }
-    
-    .btn-group { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin: 32px 0; }
-    
-    /* Grid e Cards Minimalistas */
-    .center { text-align: center; }
-    .muted { color: var(--neutral-700); font-size: 14px; line-height: 1.7; }
-    .grid { display: grid; gap: 32px; grid-template-columns: 1fr; }
-    @media (min-width: 768px) { .grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 1024px) { .grid-3 { grid-template-columns: repeat(3, 1fr); } }
-    
-    .card { 
-      border: 1px solid rgba(93, 129, 172, 0.08); 
-      border-radius: var(--radius-lg); 
-      padding: 40px; 
-      background: var(--neutral-0); 
-      box-shadow: var(--shadow);
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-hover);
-      border-color: rgba(93, 129, 172, 0.2);
-    }
-    .card h3 { font-size: 1.4rem; font-weight: 700; margin: 0 0 16px; color: var(--neutral-900); text-transform: uppercase; letter-spacing: 0.04em; }
-    
-    /* Badges */
-    .bullet { display: inline-block; padding: 10px 22px; background: var(--neutral-0); border: 1px solid var(--neutral-100); border-radius: 999px; color: var(--neutral-800); font-size: 14px; font-weight: 500; box-shadow: 0 2px 10px rgba(0,0,0,0.01); }
-    
-    ul { margin: 16px 0; padding-left: 20px; }
-    li { margin-bottom: 12px; line-height: 1.7; color: var(--neutral-700); font-size: 15px; }
-    
-    .divider { height: 1px; width: 60px; background: var(--accent); margin: 40px auto; }
-    
-    /* Seção de Frase de Impacto com Alto Contraste */
-    .quote-section { background: var(--neutral-900); color: var(--neutral-0); padding: 6rem 0; }
-    
-    footer { background: var(--neutral-900); padding: 80px 0; color: var(--neutral-100); border-top: 1px solid rgba(255,255,255,0.05); }
-    footer .muted { color: var(--neutral-700); }
-    
-    @media (max-width: 768px) {
-      .hero-headline { font-size: 2.5rem; }
-      .headline { font-size: 1.6rem; }
-      .section { padding: 4rem 0; }
-    }
-    @media (max-width: 480px) { 
-      .btn-group { flex-direction: column; gap: 14px; }
-      .cta { width: 100%; text-align: center; }
-    }
-    
-    .fade { animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) both; }
-    @keyframes fadeInUp { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- SEÇÃO 1: APRESENTAÇÃO (HERO) -->
-  <section class="section" style="background: radial-gradient(circle at center, rgba(255,255,255,0.4) 0%, transparent 100%), var(--neutral-50);" aria-labelledby="hero-title">
-    <div class="container center">
-      <img src="logo.jpg" alt="Mayra Moraes" style="width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:32px;border:2px solid var(--neutral-0);box-shadow: 0 4px 20px rgba(0,0,0,0.05);" class="fade">
-      <p class="subheadline fade" style="animation-delay:.1s">Assistente Social | Psicanalista em Formação</p>
-      <h1 id="hero-title" class="hero-headline fade" style="animation-delay:.15s; max-width:950px; margin-left:auto; margin-right:auto;">Especialista na Implantação da NR-1 nas Empresas</h1>
-      
-      <p class="body-text fade" style="animation-delay:.2s; max-width:650px; margin-left:auto; margin-right:auto; font-size:1.1rem; color: var(--neutral-900);">
-        Cuidar da saúde mental não é um custo. <span style="color:var(--accent); font-weight:700;">É uma decisão estratégica, humana e legal.</span>
-      </p>
-      
-      <div class="divider fade" style="animation-delay:.25s"></div>
-      
-      <p class="headline fade" style="animation-delay:.3s; font-size:1.6rem; max-width:800px; margin-left:auto; margin-right:auto;">
-        Saúde mental que transforma pessoas, famílias e empresas.
-      </p>
-      <p class="body-text fade" style="animation-delay:.35s; max-width:750px; margin-left:auto; margin-right:auto;">
-        Ajudo pessoas afetadas por vícios comportamentais, especialmente jogos e apostas online, e empresas que precisam se adequar à NR-1, promovendo ambientes de trabalho mais saudáveis, produtivos e seguros.
-      </p>
-      
-      <div style="margin:48px 0; text-align:left; max-width:550px; margin-left:auto; margin-right:auto; background: var(--neutral-0); border: 1px solid var(--neutral-100); padding: 32px; border-radius: var(--radius-lg); box-shadow: var(--shadow);" class="fade" style="animation-delay:.4s">
-        <p style="font-weight:700; margin-top:0; margin-bottom:16px; color: var(--neutral-900); font-size:16px; text-transform: uppercase; letter-spacing: 0.04em;">Minha atuação une:</p>
-        <ul style="margin:0; padding-left:20px; list-style-type: '→ '; color: var(--accent); font-weight: 500;">
-          <li><span style="color: var(--neutral-900);">Escuta clínica refinada</span></li>
-          <li><span style="color: var(--neutral-900);">Conhecimento técnico robusto</span></li>
-          <li><span style="color: var(--neutral-900);">Experiência prática de mercado</span></li>
-          <li><span style="color: var(--neutral-900);">E profundo compromisso humano</span></li>
-        </ul>
-      </div>
-      
-      <div style="display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin:32px 0;" class="fade" style="animation-delay:.45s">
-        <div class="bullet">📍 Atendimento individual</div>
-        <div class="bullet">📍 Consultoria empresarial</div>
-        <div class="bullet">📍 Projetos personalizados</div>
-      </div>
-      
-      <div class="btn-group fade" style="animation-delay:.5s">
-        <a href="https://wa.me/5514997439364?text=Olá Mayra, tenho interesse em saber mais" class="cta">Quero saber mais</a>
-        <a href="https://www.hotmart.com/pt-br/marketplace/produtos/projeto-game-over-como-superar-o-vicio-em-jogos-e-apostas-online/P98421643X" target="_blank" class="cta cta-secondary">Comprar Ebook Hotmart</a>
-      </div>
-    </div>
-  </section>
+  <div class="bg-overlay"></div>
 
-  <!-- SEÇÃO 2: QUEM SOU -->
-  <section class="section bg-white" aria-labelledby="quem-sou-title">
-    <div class="container center">
-      <p class="subheadline">Trajetória</p>
-      <h2 id="quem-sou-title" class="headline fade">Minha história não é apenas profissional.<br><span style="color: var(--accent);">É pessoal.</span></h2>
-      <div style="max-width:800px; margin:40px auto 0;" class="fade">
-        <p class="body-text">Sou Assistente Social, psicanalista em formação e especialista na implantação da NR-1 – Saúde Mental nas Empresas.</p>
-        <p class="body-text">Minha atuação nasceu da dor, da vivência real e da observação profunda de como o sofrimento psíquico silencioso destrói vidas, famílias e carreiras — especialmente quando envolve vícios em jogos e apostas online.</p>
-        <p class="body-text">Após acompanhar de perto pessoas muito próximas afetadas por esse vício, desenvolvi métodos próprios de orientação, acolhimento e reestruturação emocional, que hoje ajudam indivíduos e organizações a retomarem o controle, a dignidade e o equilíbrio.</p>
-        
-        <div class="card" style="margin-top:40px; border-left: 4px solid var(--accent); background: var(--neutral-50); box-shadow: none; padding: 32px; text-align: left;">
-          <p style="margin:0; font-weight:700; color: var(--neutral-900); font-size:1.1rem; letter-spacing: 0.02em;">💬 Aqui, você não encontra julgamentos. Você encontra escuta, direção e cuidado.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SEÇÃO 3: PARA QUEM É MEU TRABALHO -->
-  <section class="section bg-creme-alt" aria-labelledby="publico-title">
+  <section class="hero">
     <div class="container">
-      <div class="center" style="margin-bottom: 60px;">
-        <p class="subheadline">Público-Alvo</p>
-        <h2 id="publico-title" class="headline">Para quem é meu trabalho</h2>
+
+      <div class="logo-container">
+        <img src="images/logo.png" alt="Mayra Moraes" class="logo-img">
       </div>
-      
-      <div class="grid grid-3 fade">
-        <article class="card">
-          <h3 style="color: var(--accent);">🧠 Pessoas e Famílias</h3>
-          <ul style="margin-top:16px; padding-left:16px;">
+
+      <span class="top-badge">
+        Saúde Mental • Consultoria NR-1
+      </span>
+
+      <h1 class="hero-headline">
+        Saúde Mental que <span class="highlight">Transforma</span><br>
+        Pessoas, Famílias e Empresas
+      </h1>
+
+      <p class="hero-subheadline">
+        Atendimento especializado para pessoas afetadas por jogos e apostas online e consultoria empresarial para adequação à NR-1.
+      </p>
+
+      <div class="btn-group">
+        <a href="https://wa.me/5514997439364?text=Olá Mayra, tenho interesse em saber mais" class="btn btn-gold">
+          QUERO SABER MAIS
+        </a>
+
+        <a href="https://www.hotmart.com/pt-br/marketplace/produtos/projeto-game-over-como-superar-o-vicio-em-jogos-e-apostas-online/P98421643X" target="_blank" class="btn btn-blue">
+          COMPRAR EBOOK
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container trajectory-box">
+
+      <span class="section-subtitle">Sobre</span>
+
+      <h2 class="section-title">
+        Uma atuação baseada em ciência, experiência e cuidado humano
+      </h2>
+
+      <p class="trajectory-text">
+        Cuidar da saúde mental não é um custo. É uma decisão estratégica, humana e legal.
+      </p>
+
+      <p class="trajectory-text">
+        Ajudo pessoas afetadas por vícios comportamentais, especialmente jogos e apostas online, e empresas que precisam se adequar à NR-1.
+      </p>
+
+      <div class="quote-box">
+        Minha atuação une escuta clínica refinada, conhecimento técnico robusto, experiência prática de mercado e profundo compromisso humano.
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section impact-section">
+    <div class="container">
+
+      <span class="section-subtitle">Para quem</span>
+
+      <h2 class="section-title">
+        Quem pode se beneficiar
+      </h2>
+
+      <div class="grid grid-3">
+
+        <div class="card">
+          <h3>🧠 Pessoas e Famílias</h3>
+          <ul>
             <li>Pessoas envolvidas com jogos e apostas online</li>
             <li>Familiares emocionalmente adoecidos</li>
             <li>Indivíduos em sofrimento psíquico silencioso</li>
           </ul>
-        </article>
-        
-        <article class="card">
-          <h3>🏢 Empresas e Instituições</h3>
-          <ul style="margin-top:16px; padding-left:16px;">
-            <li>Empresas que precisam se adequar à NR-1</li>
-            <li>RHs e lideranças que desejam prevenir adoecimento mental</li>
-            <li>Organizações preocupadas com riscos psicossociais</li>
-          </ul>
-        </article>
-        
-        <article class="card">
-          <h3>🎯 Profissionais da Saúde</h3>
-          <ul style="margin-top:16px; padding-left:16px;">
-            <li>Capacitação e orientação técnica</li>
-            <li>Materiais educativos e e-books especializados</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- SEÇÃO 4: SERVIÇOS -->
-  <section class="section bg-white" aria-labelledby="servicos-title">
-    <div class="container">
-      <div class="center" style="margin-bottom: 60px;">
-        <p class="subheadline">Soluções</p>
-        <h2 id="servicos-title" class="headline">Serviços e Programas</h2>
-      </div>
-      
-      <div style="max-width:950px; margin:0 auto;" class="fade">
-        <div class="grid">
-          <article class="card">
-            <h3>🧠 Atendimento Individual</h3>
-            <p class="body-text" style="font-size:15px; margin-bottom:12px;">Escuta qualificada focada em soluções estruturadas e orientação emocional para dependência em apostas e jogos.</p>
-          </article>
-          
-          <article class="card">
-            <h3>🎯 Orientação para Famílias</h3>
-            <p class="body-text" style="font-size:15px; margin-bottom:12px;">Apoio especializado com estratégias práticas para o ambiente doméstico, reduzindo conflitos e exaustão.</p>
-          </article>
         </div>
-        
-        <article class="card" style="margin-top: 32px;">
-          <h3 style="color: var(--accent); font-size: 1.6rem;">🏢 Consultoria Empresarial – Implantação da NR-1</h3>
-          <p class="body-text">Desenvolvimento completo de programas de saúde mental corporativa em total conformidade com as obrigatoriedades legais da nova NR-1.</p>
-          <div class="grid" style="margin-top:24px; border-top:1px solid var(--neutral-100); padding-top:24px;">
-            <div>
-              <p style="font-weight:700; margin:0 0 12px; color: var(--neutral-900); text-transform: uppercase; letter-spacing: 0.04em;">O que está incluso:</p>
-              <ul style="margin:0; padding-left:16px;">
-                <li>Diagnóstico de riscos psicossociais</li>
-                <li>Adequação às exigências legais da NR-1</li>
-                <li>Estratégias preventivas e ações educativas</li>
-              </ul>
-            </div>
-            <div style="background: var(--neutral-50); padding: 24px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200);">
-              <p style="font-weight:700; margin:0 0 12px; color: var(--accent); text-transform: uppercase; letter-spacing: 0.04em;">Benefícios Corporativos:</p>
-              <p style="margin:6px 0; font-size:14px; font-weight:700; color:var(--neutral-900);">✔ Redução de absenteísmo</p>
-              <p style="margin:6px 0; font-size:14px; font-weight:700; color:var(--neutral-900);">✔ Proteção contra passivos trabalhistas</p>
-              <p style="margin:6px 0; font-size:14px; font-weight:700; color:var(--neutral-900);">✔ Elevação do clima e produtividade</p>
-            </div>
-          </div>
-        </article>
-        
-        <article class="card" style="margin-top: 32px;">
-          <h3>📘 Produção de Conteúdo e Capacitação</h3>
+
+        <div class="card">
+          <h3>🏢 Empresas</h3>
           <ul>
-            <li>E-books educativos de alta qualidade</li>
-            <li>Materiais técnicos e práticos para profissionais da área</li>
-            <li>Palestras magnas e ações focadas em conscientização interna</li>
+            <li>Adequação à NR-1</li>
+            <li>RHs e lideranças</li>
+            <li>Riscos psicossociais</li>
           </ul>
-        </article>
+        </div>
+
+        <div class="card">
+          <h3>🎯 Profissionais</h3>
+          <ul>
+            <li>Capacitação especializada</li>
+            <li>Materiais técnicos</li>
+            <li>Conteúdo educativo</li>
+          </ul>
+        </div>
+
       </div>
+
     </div>
   </section>
 
-  <!-- SEÇÃO 5: RESULTADOS E IMPACTOS -->
-  <section class="section bg-creme-alt" aria-labelledby="resultados-title">
-    <div class="container center">
-      <p class="subheadline">Impacto</p>
-      <h2 id="resultados-title" class="headline">Resultados Reais</h2>
-      
-      <div style="max-width:750px; margin:40px auto 0;" class="fade">
-        <div style="display: grid; gap: 14px; text-align: left; margin-bottom: 40px;">
-          <div class="bullet" style="border-radius:var(--radius-md);">✔ Pessoas que retomam com segurança o controle da própria vida</div>
-          <div class="bullet" style="border-radius:var(--radius-md);">✔ Famílias estruturadas que aprendem a apoiar sem adoecer juntas</div>
-          <div class="bullet" style="border-radius:var(--radius-md);">✔ Empresas significativamente mais humanas, produtivas e seguras</div>
-          <div class="bullet" style="border-radius:var(--radius-md);">✔ Mitigação expressiva de riscos legais organizacionais</div>
-        </div>
-        
-        <div class="card" style="border: 1px solid rgba(93, 129, 172, 0.2); background: rgba(93, 129, 172, 0.02);">
-          <p style="margin:0; font-weight:700; color: var(--accent-dark); font-size:1.1rem; text-transform: uppercase; letter-spacing: 0.04em;">💡 Resultados não são apenas dados estatísticos. São vidas reorganizadas.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SEÇÃO 6: AUTORIDADE -->
-  <section class="section bg-white" aria-labelledby="ebooks-title">
+  <section class="section">
     <div class="container">
-      <div class="center" style="margin-bottom: 60px;">
-        <p class="subheadline">Literatura</p>
-        <h2 id="ebooks-title" class="headline">Autoridade e Conhecimento</h2>
-      </div>
-      
-      <div class="grid fade" style="max-width: 900px; margin: 0 auto;">
-        <article class="card">
-          <h3 style="color: var(--accent);">📕 Projeto Game Over</h3>
-          <p style="font-weight:700; color: var(--neutral-700); margin: 0 0 16px; font-size:12px; text-transform: uppercase; letter-spacing: 0.06em;">Foco: Pacientes e Famílias</p>
-          <p class="body-text" style="font-size:15px; margin: 0;">Guia de orientação prática voltado estritamente para pessoas afetadas por jogos e apostas online. Focado em redução de culpa e reestruturação.</p>
-        </article>
-        
-        <article class="card">
-          <h3 style="color: var(--accent);">📘 Ludomania em Foco</h3>
-          <p style="font-weight:700; color: var(--neutral-700); margin: 0 0 16px; font-size:12px; text-transform: uppercase; letter-spacing: 0.06em;">Foco: Profissionais da Saúde</p>
-          <p class="body-text" style="font-size:15px; margin: 0;">Capacitação técnica para profissionais da saúde mental. Aborda diretrizes, conceitos analíticos e protocolos clínicos.</p>
-        </article>
-      </div>
-      
-      <div class="center fade" style="margin-top: 48px;">
-        <div class="btn-group">
-          <a href="https://www.hotmart.com/pt-br/marketplace/produtos/projeto-game-over-como-superar-o-vicio-em-jogos-e-apostas-online/P98421643X" target="_blank" class="cta">Adquirir na Hotmart</a>
-          <a href="https://wa.me/5514997439364?text=Olá Mayra, gostaria de tirar dúvidas sobre os e-books" target="_blank" class="cta cta-secondary">Dúvidas no WhatsApp</a>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- SEÇÃO 7: POSICIONAMENTO (QUOTE SECTION COM ALTO CONTRASTE) -->
-  <section class="quote-section" aria-labelledby="posicionamento-title">
-    <div class="container center">
-      <h2 id="posicionamento-title" class="headline" style="color: var(--neutral-0); font-size: 2.2rem; line-height: 1.4; max-width: 850px; margin: 0 auto;">
-        "Saúde mental não é sinal de fraqueza.<br><span style="color: var(--accent);">É responsabilidade</span> individual, social e corporativa."
+      <span class="section-subtitle">Serviços</span>
+
+      <h2 class="section-title">
+        Como posso ajudar
       </h2>
-    </div>
-  </section>
 
-  <!-- SEÇÃO 8: CTA FINAL -->
-  <section class="section center bg-creme-alt" aria-labelledby="cta-final-title">
-    <div class="container">
-      <h2 id="cta-final-title" class="headline">Você não precisa enfrentar isso sozinho(a).</h2>
-      <p class="body-text fade" style="max-width:680px; margin: 0 auto 40px; font-size: 1.1rem; color: var(--neutral-900);">
-        Seja para reestruturar sua saúde psíquica, estender apoio a quem você estima ou adequar legalmente sua empresa às exigências da NR-1, existe um caminho seguro, ético e humano.
-      </p>
-      
-      <div style="display: inline-flex; flex-direction: column; gap: 12px; text-align: left; background: var(--neutral-0); border: 1px solid var(--neutral-200); padding: 24px 32px; border-radius: var(--radius-md); margin-bottom: 40px;" class="fade">
-        <span style="font-weight: 700; font-size: 15px; color: var(--neutral-900);">📲 Atendimento humanizado e estritamente sigiloso</span>
-        <span style="font-weight: 700; font-size: 15px; color: var(--neutral-900);">📩 Agendamentos e pareceres iniciais abertos</span>
+      <div class="grid grid-2">
+
+        <div class="card">
+          <h3>🧠 Atendimento Individual</h3>
+          <ul>
+            <li>Dependência em jogos e apostas</li>
+            <li>Orientação emocional</li>
+            <li>Plano estruturado de recuperação</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>🎯 Orientação Familiar</h3>
+          <ul>
+            <li>Redução de conflitos</li>
+            <li>Estratégias de apoio</li>
+            <li>Reconstrução de vínculos</li>
+          </ul>
+        </div>
+
       </div>
-      
-      <br>
-      <a href="https://wa.me/5514997439364?text=Olá Mayra, tenho interesse em consultoria" class="cta fade">Falar com Mayra Moraes</a>
+
+      <div class="card" style="margin-top:30px;">
+        <h3>🏢 Consultoria Empresarial – Implantação da NR-1</h3>
+
+        <p>
+          Desenvolvimento completo de programas de saúde mental corporativa em conformidade com a NR-1.
+        </p>
+
+        <div class="grid grid-2">
+
+          <div>
+            <h4>O que está incluso:</h4>
+
+            <ul class="check-list">
+              <li>Diagnóstico de riscos psicossociais</li>
+              <li>Adequação legal</li>
+              <li>Ações preventivas</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Benefícios:</h4>
+
+            <ul class="check-list">
+              <li>Redução de absenteísmo</li>
+              <li>Menor risco trabalhista</li>
+              <li>Melhoria da produtividade</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer role="contentinfo">
-    <div class="container center">
-      <p class="muted" style="max-width: 700px; margin: 0 auto 32px; font-size:13px;">Importante: O conteúdo exposto neste canal não substitui diagnósticos ou o acompanhamento médico e psicológico regular. Diante de quadros agudos, direcione-se ao serviço de saúde mais próximo.</p>
-      <div style="height: 1px; background: rgba(255,255,255,0.1); margin-bottom: 32px;"></div>
-      <p style="font-weight: 500; font-size: 13px; margin: 0;">© 2026 Mayra Moraes. Todos os direitos reservados.</p>
+  <section class="section impact-section">
+    <div class="container">
+
+      <span class="section-subtitle">Materiais</span>
+
+      <h2 class="section-title">
+        E-books e Capacitações
+      </h2>
+
+      <div class="grid grid-2">
+
+        <div class="card">
+          <h3>📕 Projeto Game Over</h3>
+          <p>
+            Guia para pessoas afetadas por jogos e apostas online.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>📘 Ludomania em Foco</h3>
+          <p>
+            Capacitação para profissionais da saúde mental.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+
+      <h2>Pronto para dar o próximo passo?</h2>
+
+      <div class="btn-group">
+        <a href="https://wa.me/5514997439364?text=Olá Mayra, tenho interesse em consultoria" class="btn btn-gold">
+          FALAR COM MAYRA
+        </a>
+      </div>
+
+      <p class="footer-disclaimer">
+        Atendimento humanizado, sigiloso e baseado em evidências.
+      </p>
+
     </div>
   </footer>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Mayra Moraes",
-    "jobTitle": "Assistente Social | Psicanalista em Formação",
-    "description": "Especialista em saúde mental, implantação de NR-1 e tratamento para vícios em jogos online.",
-    "url": "",
-    "sameAs": []
-  }
-  </script>
 </body>
 </html>
