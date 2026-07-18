@@ -1,41 +1,60 @@
 :root {
   --bg-color: #ECE5DC;
   --bg-secondary: #D8CFC3;
-  --text-primary: #31475D;    /* Azul marinho profundo (Botões e Títulos) */
-  --text-secondary: #5A6E82;  /* Azul levemente mais claro (Corpo do texto) */
-  --text-accent: #8C7B6C;     /* O tom de "taupe" para subtítulos e detalhes */
-  --border: rgba(49, 71, 93, 0.25);
+  
+  /* Paleta de Cores Refinada */
+  --text-primary: #1E2D3B;    /* Azul Marinho Profundo (Botões/Títulos) */
+  --text-secondary: #4A5B6D;  /* Azul Suave (Corpo do Texto - Diferenciado) */
+  --accent-taupe: #8C7B6C;    /* Tom Terroso (Subtítulos - Contraste Sofisticado) */
+  
+  --border: rgba(30, 45, 59, 0.25);
 }
 
-/* Aplicando as cores de forma diferenciada */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
 
-/* Títulos continuam com o Azul Marinho para autoridade */
-h1, h2, h3 { 
-  font-family: 'Cormorant Garamond', serif; 
-  color: var(--text-primary); 
-}
-
-/* O corpo do texto usa o azul secundário, diferenciando-se visualmente do botão */
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: var(--bg-color);
-  color: var(--text-secondary); /* Diferenciado do Azul Marinho dos botões */
+  color: var(--text-secondary); /* Texto em tom de azul mais suave */
   line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Subtítulos usam a cor de acento para criar um contraste elegante */
-.section-subtitle {
-  display: block;
-  text-align: center;
-  color: var(--text-accent); /* Cor diferente do botão e dos títulos */
-  text-transform: uppercase;
-  letter-spacing: 4px;
+/* Espaçamento e Containers */
+.section { padding: 120px 0; } 
+.container { width: min(1100px, 92vw); margin: auto; padding: 0 20px; }
+
+/* HERO */
+.hero { text-align: center; padding: 140px 0 100px; }
+
+.logo-img {
+  max-width: 200px;
+  filter: grayscale(1) opacity(0.9);
+}
+
+.top-badge {
+  display: inline-block;
+  border: 2px solid var(--text-primary);
+  padding: 8px 24px;
   font-size: 11px;
+  letter-spacing: 3px;
   font-weight: 700;
-  margin-bottom: 20px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  color: var(--text-primary);
 }
 
-/* Botões mantêm o Azul Marinho para destacar a ação */
+.hero-headline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  color: var(--text-primary); /* Títulos em azul marinho forte */
+  font-weight: 500;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+}
+
+/* Botões com Azul Marinho Sólido */
 .btn {
   padding: 18px 45px;
   border: 2px solid var(--text-primary);
@@ -53,4 +72,43 @@ body {
   background: transparent;
   color: var(--text-primary);
   cursor: pointer;
+}
+
+/* Tipografia e Títulos */
+h1, h2, h3 { 
+  font-family: 'Cormorant Garamond', serif; 
+  color: var(--text-primary); 
+}
+
+/* Subtítulos diferenciados em tom Taupe */
+.section-subtitle {
+  display: block;
+  text-align: center;
+  color: var(--accent-taupe); /* Contraste elegante */
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Cards */
+.card {
+  background: rgba(255, 255, 255, 0.4);
+  border: 2px solid var(--border);
+  padding: 50px;
+  transition: all 0.5s ease;
+}
+
+.card:hover {
+  background: var(--bg-secondary);
+  border-color: var(--text-primary);
+  transform: translateY(-5px);
+}
+
+/* RESPONSIVO */
+@media(max-width:768px) {
+  .section { padding: 80px 0; }
+  .hero-headline { font-size: 2.5rem; }
+  .btn { width: 100%; }
 }
