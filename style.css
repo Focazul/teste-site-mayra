@@ -1,13 +1,15 @@
 :root {
-  --bg-color: #ECE5DC;
-  --bg-secondary: #D8CFC3;
+  /* Paleta Lápis-Lazúli */
+  --bg-color: #F8F9FA;         /* Branco Mineral (Fundo limpo e nobre) */
+  --bg-secondary: #E9ECEF;     /* Cinza suave para cards */
   
-  /* Paleta de Cores Refinada */
-  --text-primary: #1E2D3B;    /* Azul Marinho Profundo (Botões/Títulos) */
-  --text-secondary: #4A5B6D;  /* Azul Suave (Corpo do Texto - Diferenciado) */
-  --accent-taupe: #8C7B6C;    /* Tom Terroso (Subtítulos - Contraste Sofisticado) */
+  --text-primary: #0A192F;     /* Azul Noturno (Imponência e autoridade) */
+  --text-secondary: #334155;   /* Cinza Azulado (Leitura confortável) */
   
-  --border: rgba(30, 45, 59, 0.25);
+  --lapis-blue: #1E3A8A;       /* O tom Lápis-Lazúli (Ação e destaque) */
+  --pyrite-gold: #C5A059;      /* Dourado Pirita (Detalhes de luxo) */
+  
+  --border: rgba(30, 58, 138, 0.2);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -16,7 +18,7 @@ html { scroll-behavior: smooth; }
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: var(--bg-color);
-  color: var(--text-secondary); /* Texto em tom de azul mais suave */
+  color: var(--text-secondary);
   line-height: 1.8;
   -webkit-font-smoothing: antialiased;
 }
@@ -30,35 +32,35 @@ body {
 
 .logo-img {
   max-width: 200px;
-  filter: grayscale(1) opacity(0.9);
+  filter: grayscale(1) contrast(1.2);
 }
 
 .top-badge {
   display: inline-block;
-  border: 2px solid var(--text-primary);
+  border: 1px solid var(--pyrite-gold); /* Detalhe em Dourado */
   padding: 8px 24px;
   font-size: 11px;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 40px;
-  color: var(--text-primary);
+  color: var(--pyrite-gold); /* Cor do Dourado Pirita */
 }
 
 .hero-headline {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(2.8rem, 7vw, 5rem);
-  color: var(--text-primary); /* Títulos em azul marinho forte */
+  color: var(--text-primary);
   font-weight: 500;
   margin-bottom: 30px;
   letter-spacing: -1px;
 }
 
-/* Botões com Azul Marinho Sólido */
+/* Botões: Lápis-Lazúli Sólido */
 .btn {
   padding: 18px 45px;
-  border: 2px solid var(--text-primary);
-  background: var(--text-primary); 
+  border: 2px solid var(--lapis-blue);
+  background: var(--lapis-blue);
   color: #ffffff;
   font-size: 13px;
   font-weight: 700;
@@ -70,39 +72,40 @@ body {
 
 .btn:hover {
   background: transparent;
-  color: var(--text-primary);
+  color: var(--lapis-blue);
   cursor: pointer;
 }
 
 /* Tipografia e Títulos */
 h1, h2, h3 { 
   font-family: 'Cormorant Garamond', serif; 
-  color: var(--text-primary); 
+  color: var(--lapis-blue); /* Títulos no azul profundo da pedra */
 }
 
-/* Subtítulos diferenciados em tom Taupe */
+/* Subtítulos em Dourado para contraste */
 .section-subtitle {
   display: block;
   text-align: center;
-  color: var(--accent-taupe); /* Contraste elegante */
+  color: var(--pyrite-gold); 
   text-transform: uppercase;
-  letter-spacing: 4px;
-  font-size: 12px;
+  letter-spacing: 5px;
+  font-size: 11px;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
-/* Cards */
+/* Cards com sombra suave e borda azul */
 .card {
-  background: rgba(255, 255, 255, 0.4);
-  border: 2px solid var(--border);
+  background: #ffffff;
+  border: 1px solid var(--border);
   padding: 50px;
   transition: all 0.5s ease;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
 }
 
 .card:hover {
   background: var(--bg-secondary);
-  border-color: var(--text-primary);
+  border-color: var(--lapis-blue);
   transform: translateY(-5px);
 }
 
